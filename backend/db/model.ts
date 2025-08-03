@@ -1,10 +1,10 @@
-import { DataTypes, Model } from 'sequelize'
-import  sequelize  from '../lib/sequelize';
+import { DataTypes, Model } from "sequelize";
+import sequelize from "../lib/sequelize";
 
 class Block extends Model {
- declare id: number;
- declare title: string;
- declare code: string;
+  declare id: number;
+  declare title: string;
+  declare code: string;
 }
 
 Block.init(
@@ -12,7 +12,7 @@ Block.init(
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
-      primaryKey: true
+      primaryKey: true,
     },
     // Model attributes are defined here
     title: {
@@ -21,14 +21,14 @@ Block.init(
     },
     code: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
   },
   {
     // Other model options go here
     sequelize,
-    modelName: 'Block',
-  },
+    modelName: "Block",
+  }
 );
 
 // `sequelize.define` also returns the model

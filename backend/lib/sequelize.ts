@@ -16,3 +16,5 @@ const sequelize = new Sequelize("codeblocks_db", "pfacanha", "MySQL.123!", {
     console.error("Unable to connect to the database:", error);
   }
 })();
+
+export default sequelize;
