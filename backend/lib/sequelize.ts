@@ -3,7 +3,7 @@ import "dotenv/config";
 
 const mysqlPassword = process.env.MYSQL_PASSWORD;
 
-const sequelize = new Sequelize("codeblocks_db", "pfacanha", "MySQL.123!", {
+const sequelize = new Sequelize("codeblocks_db", "pfacanha", mysqlPassword!, {
   host: "localhost",
   dialect: "mysql",
 });
